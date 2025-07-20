@@ -365,7 +365,7 @@ This implementation draws inspiration from:
 
 For questions, issues, or collaboration opportunities:
 - GitHub Issues: [Project Issues](https://github.com/chaurasiavikash/mri_reconstruction/issues)
-- Email: [Create an issue for contact information]
+- Email: chaurasiavik@gmail.com
 
 ## References
 
