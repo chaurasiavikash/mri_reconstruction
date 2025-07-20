@@ -2,6 +2,9 @@
 
 A comprehensive implementation of MRI reconstruction algorithms comparing classical compressed sensing methods with deep learning approaches. This project demonstrates end-to-end reconstruction pipelines suitable for research and clinical applications.
 
+![Reconstruction Comparison](docs/images/reconstruction_comparison_overview.png)
+*Figure 1: MRI reconstruction comparison showing Ground Truth, Zero-filled (19.3 dB), FISTA (26.8 dB), and U-Net (30.4 dB) for 4× acceleration. U-Net demonstrates superior artifact suppression and detail preservation.*
+
 ## Project Overview
 
 Medical imaging, particularly MRI, often requires long acquisition times that can be reduced through undersampling techniques. However, undersampled data leads to artifacts that must be corrected through sophisticated reconstruction algorithms. This project implements and compares multiple reconstruction approaches:
@@ -11,6 +14,9 @@ Medical imaging, particularly MRI, often requires long acquisition times that ca
 - **Baseline**: Zero-filled reconstruction for comparison
 
 The implementation includes synthetic data generation, comprehensive evaluation metrics, and a complete experimental pipeline for systematic comparison of reconstruction methods.
+
+![Performance Summary](docs/images/performance_summary.png)
+*Figure 2: Performance analysis across acceleration factors. Left: PSNR comparison showing U-Net's consistent superiority. Center: SSIM structural similarity metrics. Right: Computational efficiency comparison.*
 
 ## Repository Structure
 
@@ -52,6 +58,9 @@ mri_reconstruction/
 │   ├── config.py                  # Configuration management
 │   └── model_config.yaml          # Model configurations
 ├── notebooks/                     # Jupyter notebooks for exploration
+├── docs/
+│   ├── images/                    # Documentation figures
+│   └── technical_report.pdf       # Comprehensive technical documentation
 ├── requirements.txt               # Python dependencies
 ├── setup.py                       # Package installation
 └── README.md                      # This file
@@ -248,6 +257,13 @@ Note: U-Net performance requires proper training. The included implementation pr
 - **Memory**: 4-8 GB RAM for 256x256 images
 - **Storage**: ~100 MB for full installation
 - **GPU**: Optional, reduces U-Net inference time by 10-50x
+
+## Documentation
+
+For detailed technical documentation, algorithm descriptions, and comprehensive evaluation results, see:
+- **Technical Report**: [`docs/technical_report.pdf`](docs/technical_report.pdf)
+- **Algorithm Details**: Individual module documentation
+- **Jupyter Notebooks**: Interactive examples in [`notebooks/`](notebooks/)
 
 ## Testing
 

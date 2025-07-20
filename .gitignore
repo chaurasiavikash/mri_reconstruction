@@ -30,7 +30,7 @@ comparisons/
 benchmarks/
 evaluation_results/
 
-# Generated images and visualizations
+# Generated images and visualizations (EXCLUDE ALL...)
 *.png
 *.jpg
 *.jpeg
@@ -40,6 +40,11 @@ evaluation_results/
 plots/
 figures/
 images/
+
+# (...BUT KEEP DOCUMENTATION FIGURES)
+# Allow specific documentation figures needed for README display
+!docs/images/reconstruction_comparison_overview.png
+!docs/images/performance_summary.png
 
 # Model weights and checkpoints
 models/
@@ -198,11 +203,16 @@ dmypy.json
 *.npy
 *.npz
 
-# Matplotlib
+# Matplotlib (exclude all images...)
 *.png
 *.jpg
 *.svg
 *.pdf
+
+# (...except documentation)
+!docs/images/*.png
+!docs/images/*.jpg  
+!docs/images/*.svg
 
 # Jupyter Notebook outputs
 *.ipynb
@@ -326,62 +336,6 @@ tramp
 *.sublime-project
 
 # =============================================================================
-# Configuration Files (Keep templates, exclude instance-specific)
-# =============================================================================
-
-# Keep template configs, exclude instance-specific ones
-config/local_config.py
-config/secrets.yaml
-config/user_config.yaml
-.env
-.env.local
-.env.production
-
-# Database files
-*.db
-*.sqlite
-*.sqlite3
-
-# =============================================================================
-# Temporary and Cache Files
-# =============================================================================
-
-# General temporary files
-tmp/
-temp/
-.tmp/
-.temp/
-*.tmp
-*.temp
-
-# Cache directories
-.cache/
-cache/
-__pycache__/
-
-# =============================================================================
-# Documentation Build
-# =============================================================================
-
-# Sphinx build
-docs/_build/
-docs/build/
-
-# =============================================================================
-# Cloud and Remote Storage
-# =============================================================================
-
-# Google Drive
-*.gdoc
-*.gsheet
-*.gslides
-
-# Dropbox
-.dropbox
-.dropbox.attr
-.dropbox.cache
-
-# =============================================================================
 # Keep These Important Files
 # =============================================================================
 
@@ -399,6 +353,12 @@ docs/build/
 !docs/
 !docs/**/*.md
 !docs/**/*.rst
+
+# IMPORTANT: Keep documentation images for README display
+!docs/images/
+!docs/images/*.png
+!docs/images/*.jpg
+!docs/images/*.svg
 
 # Keep test files
 !tests/
